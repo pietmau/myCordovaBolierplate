@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <title>phonegap & jquery mobile boilerplate</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+
+  <link rel="stylesheet"  href="css/jquery.mobile.structure.css" />
+  <link rel="stylesheet" href="css/jquery.mobile.theme.css" />
+  
+ 
+  
+  <script src="js/lib/jquery.js"></script>
+  <!-- your scripts here -->
+  <script type="text/javascript" src="cordova.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+  <script src="js/lib/jquery.mobile.js"></script>
+  
+  </head>
+  <body>
+    
+<div data-role="page" id="homePage">
+    <div data-theme="" data-role="header">
+ 
+<h3>Schede immobiliari</h3>
+ 
+<a id="btnExit" data-role="button" href="#homePage" data-icon="delete" data-iconpos="right" class="ui-btn-right"></a>
+ 
+</div>
+ 
+    <div data-role="content">
+        <a data-role="button" href="#scheda" data-icon="plus" data-iconpos="left">Nuova scheda</a>
+        <a data-role="button" href="#elencoSchede" data-icon="bars" data-iconpos="left">Elenco schede</a>
+        <a id="btnInviaSchede" data-role="button" href="#page1" data-icon="forward" data-iconpos="left">Invia schede</a>
+    </div>
+ 
+    <div data-theme="a" data-role="footer" data-position="fixed">
+        <h3>Schede immobiliari</h3>
+    </div>
+</div>
+<div data-role="page" id="scheda">
+    <div data-theme="" data-role="header">
+        <a id="btnBack" data-role="button" href="#homePage" data-icon="back" data-iconpos="left" class="ui-btn-left"></a>
+        <h3>Nuova scheda</h3>
+    </div>
+ 
+    <div data-role="content">
+        <div data-role="fieldcontain">
+            <input name="txtNome" id="txtNome" placeholder="Nome scheda" value="" type="text">
+        </div>
+        <div data-role="fieldcontain">
+            <input name="txtIndirizzo" id="txtIndirizzo" placeholder="Indirizzo" value="" type="text">
+        </div>
+        <div data-role="fieldcontain">
+            <textarea name="txtDescrizione" id="txtDescrizione" placeholder="Descrizione"></textarea>
+        </div>
+        <div data-role="fieldcontain">
+            <input name="txtPrezzo" id="txtPrezzo" placeholder="Prezzo" value="" type="number">
+        </div>
+        <div data-role="fieldcontain">
+            <a id="btnSalva" data-role="button" href="#">Salva</a>
+        </div>
+    </div>
+     
+    <div data-theme="a" data-role="footer" data-position="fixed">
+        <h3>Schede immobiliari</h3>
+    </div>
+</div>
+<div data-role="page" id="elencoSchede">
+    <div data-theme="" data-role="header">
+        <a id="btnBack" data-role="button" href="#homePage" data-icon="back" data-iconpos="left" class="ui-btn-left"></a>
+        <h3>Schede immobiliari</h3>
+    </div>
+ 
+    <div data-role="content">
+        <ul id="liElencoSchede" data-role="listview" data-divider-theme="d" data-inset="true">
+            <li data-role="list-divider" role="heading">Schede</li>
+            <li data-theme="c">
+                <a href="#scheda" data-transition="slide">Appartamento Firenze Centro</a>
+            </li>
+            <li data-theme="c">
+                <a href="#scheda" data-transition="slide">Villa Roma Trastevere</a>
+            </li>
+            <li data-theme="c">
+                <a href="#scheda" data-transition="slide">Villetta a schiera Napoli Vomero</a>
+            </li>
+        </ul>
+    </div>
+     
+    <div data-theme="a" data-role="footer" data-position="fixed">
+        <h3>Schede immobiliari</h3>
+    </div>
+</div>
+    
+  </body>
+</html>
